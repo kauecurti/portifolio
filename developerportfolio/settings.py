@@ -37,7 +37,6 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django_sass',
-    'main.apps.MainConfig',
     'blog.apps.BlogConfig',
     'jobs.apps.JobsConfig',
     'django.contrib.admin',
@@ -46,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -132,7 +132,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'main')
+# Isso é usado apenas quando você coleta arquivos estáticos para produção com `collectstatic`
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
