@@ -20,6 +20,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+EMAIL_RECEIVER = 'kauecurti@hotmail.com'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -100,6 +101,7 @@ DATABASES = {
         'PORT': '5432'
     }
 }
+
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -138,11 +140,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 MEDIA_URL = '/media/'
-"""
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = config['EMAIL_HOST']
-EMAIL_PORT = config['EMAIL_PORT']
+EMAIL_HOST = 'smtp-mail.outlook.com'  # Host do Hotmail/Outlook
+EMAIL_PORT = 587  # Porta para TLS
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = config['EMAIL_HOST_USER']
-EMAIL_HOST_PASSWORD = config['EMAIL_HOST_PASSWORD']
-"""
+EMAIL_HOST_USER = 'kauecurti@hotmail.com'  # Seu endereço de email
+EMAIL_HOST_PASSWORD = 'K@ue1020304050'  # Sua senha
