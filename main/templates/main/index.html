@@ -230,23 +230,10 @@
         {% endif %}
         <h2>Get in Touch</h2>
         <div id="contact-form">
-
-            <form method="post">
-                {% csrf_token %}
-                {% for field in contact_us%}
-                <!-- <label>{{ field.label }}</label> -->
-                {{ field}}
-                {% if field.errors %}
-                <div class="alert form_alert" style="color: white; size: 1.2rem;">
-                    {% for error in field.errors %}
-                    <p style="text-align: start;">{{ error }}</p>
-                    {% endfor %}
-                </div>
-                {% endif %}
-                {% endfor %}
-                <!-- {{ contact_us.as_p }} -->
-                <button type="submit">Send</button>
-            </form>
+            <p>Kaue Andreatti Curti</p>
+            <p>Email -> kauecurti@hotmail.com</p>
+           
+            
         </div>
         <!-- End #contact-form -->
     </div>
@@ -257,7 +244,7 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 202 {{about_me.name}}
+                        Copyright &copy; 2025 {{about_me.name}}
                     </p>
                 </div>
                 <div class="col-sm-2 top">
